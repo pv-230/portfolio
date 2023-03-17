@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-import GlobalStyle from '../common/global-styles';
 import '../common/reset.css';
+import GlobalStyle from '../common/global-styles';
+import Header from './header';
 
 const StyledApp = styled.div`
   height: 100%;
@@ -14,18 +15,7 @@ function App() {
     <>
       <GlobalStyle />
       <StyledApp>
-        <header>
-          <nav>
-            <ul>
-              <li>
-                <a href="/">About</a>
-                <a href="/">Projects</a>
-                <a href="/">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <button type="button">Theme</button>
-        </header>
+        <Header />
         <main>
           <hgroup>
             <h1>Peter Vasiljev</h1>
