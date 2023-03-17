@@ -7,6 +7,8 @@ const StyledHeader = styled.header`
   height: 50px;
   background-color: red;
   gap: 20px;
+  position: sticky;
+  top: 0;
 `;
 
 const NavList = styled.ul`
