@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { SectionHeader } from '../common/common-styles';
+
 const StyledAbout = styled.div`
   display: flex;
   flex-direction: column;
@@ -26,11 +28,7 @@ const NameHeader = styled.h1`
 const AboutSection = styled.section`
   display: flex;
   flex-direction: column;
-`;
-
-const AboutHeader = styled.h2`
-  font-size: 1.2rem;
-  text-align: center;
+  align-items: center;
 `;
 
 const AboutText = styled.p`
@@ -47,7 +45,7 @@ function About() {
         <p>Aspiring web developer</p>
       </HeaderGroup>
       <AboutSection>
-        <AboutHeader>About</AboutHeader>
+        <SectionHeader>About</SectionHeader>
         <AboutText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua.
