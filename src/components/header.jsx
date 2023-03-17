@@ -4,10 +4,11 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  width: 100%;
+  height: var(--header-height);
   background-color: red;
   gap: 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
 `;
 

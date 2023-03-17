@@ -4,6 +4,8 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
       'Segoe UI Emoji', 'Segoe UI Symbol';
+    
+    --header-height: 50px;
   }
 
   *,
