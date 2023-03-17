@@ -5,6 +5,7 @@ import GlobalStyle from '../common/global-styles';
 import Header from './header';
 import About from './about';
 import Projects from './projects';
+import Contact from './contact';
 
 const StyledApp = styled.div`
   height: 100%;
@@ -21,10 +22,7 @@ function App() {
         <main>
           <About />
           <Projects />
-          <section>
-            <h2>Contact</h2>
-            <p>This is the contact section.</p>
-          </section>
+          <Contact />
         </main>
         <footer>
           <p>This is the footer.</p>
