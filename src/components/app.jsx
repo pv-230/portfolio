@@ -8,7 +8,9 @@ import Projects from './projects';
 import Contact from './contact';
 
 const StyledApp = styled.div`
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 //-------------------------------------------------------------------------------------------------
