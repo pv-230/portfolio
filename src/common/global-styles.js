@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
       'Segoe UI Emoji', 'Segoe UI Symbol';
     
     --header-height: 50px;
+
+    --dark-font-color: hsl(0, 0%, 10%);
+    --light-font-color: hsl(0, 0%, 90%);
+    --dark-gray-bg-color: hsl(0, 0%, 20%);
+    --gold: hsl(50, 100%, 50%);
   }
 
   *,
