@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
     --dark-font-color: hsl(0, 0%, 10%);
     --light-font-color: hsl(0, 0%, 90%);
-    --dark-gray-bg-color: hsl(0, 0%, 20%);
+    --dark-gray: hsl(0, 0%, 20%);
     --gold: hsl(50, 100%, 50%);
   }
 

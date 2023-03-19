@@ -6,7 +6,7 @@ const StyledHeader = styled.header`
   align-items: center;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--dark-gray-bg-color);
+  background-color: var(--dark-gray);
   gap: 20px;
   position: fixed;
   top: 0;
