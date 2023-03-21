@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     --dark-10: hsl(0, 0%, 10%);
     --dark-20: hsl(0, 0%, 20%);
     --gold: hsl(50, 100%, 50%);
+    --green: hsl(120, 30%, 50%);
   }
 
   *,
