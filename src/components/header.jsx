@@ -6,7 +6,7 @@ const StyledHeader = styled.header`
   align-items: center;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--dark-gray);
+  background-color: var(--dark-20);
   gap: 20px;
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@ const NavLink = styled.a`
   text-align: center;
   padding: 5px;
   font-size: 1.2rem;
-  color: var(--light-font-color);
+  color: var(--light-90);
   text-decoration: none;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;

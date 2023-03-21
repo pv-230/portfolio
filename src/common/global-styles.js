@@ -2,14 +2,14 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    --system-ui: 'Source Sans Pro', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
       'Segoe UI Emoji', 'Segoe UI Symbol';
     
     --header-height: 50px;
 
-    --dark-font-color: hsl(0, 0%, 10%);
-    --light-font-color: hsl(0, 0%, 90%);
-    --dark-gray: hsl(0, 0%, 20%);
+    --light-90: hsl(0, 0%, 90%);
+    --dark-10: hsl(0, 0%, 10%);
+    --dark-20: hsl(0, 0%, 20%);
     --gold: hsl(50, 100%, 50%);
   }
 
