@@ -22,12 +22,34 @@ const HeaderGroup = styled.hgroup`
 `;
 
 const HeaderTitle = styled.h1`
-  font-size: 3rem;
+  font-size: 2.75rem;
   color: var(--gold);
+  opacity: 0%;
+  animation: 1s 500ms forwards fadein;
 `;
 
 const HeaderText = styled.p`
   font-size: 2rem;
+  opacity: 0%;
+  animation: 1s forwards fadein;
+`;
+
+const Line = styled.div`
+  width: 0px;
+  height: 2px;
+  background-color: var(--red);
+  border-radius: 10px;
+  animation: 1s 1s forwards stretch;
+
+  @keyframes stretch {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
 `;
 
 const AboutContent = styled.section`
@@ -35,6 +57,8 @@ const AboutContent = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  opacity: 0%;
+  animation: 1s 1s forwards fadein;
 `;
 
 const AboutHeader = styled(SectionHeader)`
@@ -67,6 +91,7 @@ function About() {
         <HeaderText>I am</HeaderText>
         <HeaderTitle>Pete Vasiljev</HeaderTitle>
       </HeaderGroup>
+      <Line />
       <AboutContent>
         <AboutHeader>About</AboutHeader>
         <AboutTextGroup>

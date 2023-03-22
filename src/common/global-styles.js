@@ -9,9 +9,10 @@ const GlobalStyle = createGlobalStyle`
 
     --light-90: hsl(0, 0%, 90%);
     --dark-10: hsl(0, 0%, 10%);
-    --dark-20: hsl(0, 0%, 20%);
-    --gold: hsl(50, 100%, 50%);
-    --green: hsl(120, 30%, 50%);
+    --dark-20: hsl(0, 0%, 17%);
+    --gold: hsl(50, 75%, 50%);
+    --green: hsl(120, 75%, 50%);
+    --red: hsl(0, 75%, 50%);
   }
 
   *,
@@ -25,6 +26,16 @@ const GlobalStyle = createGlobalStyle`
   #root {
     height: 100%;
     font-family: var(--system-ui);
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0%;
+    }
+    
+    to {
+      opacity: 100%;
+    }
   }
 `;
 
