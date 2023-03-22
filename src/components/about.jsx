@@ -6,7 +6,7 @@ const StyledAbout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 60ch;
+  max-width: 600px;
   min-height: 100vh;
   padding: 20px;
   padding-top: calc(var(--header-height) + 40px);
