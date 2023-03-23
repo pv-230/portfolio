@@ -1,20 +1,19 @@
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 import { StyledSection, SectionHeader } from '../common/common-styles';
 
 const StyledContact = styled(StyledSection)`
-  background-color: green;
+  color: var(--light-90);
 `;
 
 //-------------------------------------------------------------------------------------------------
 
-function Contact() {
-  return (
-    <StyledContact id="contact">
-      <SectionHeader>Contact</SectionHeader>
-      <p>This is the contact section.</p>
-    </StyledContact>
-  );
-}
+const Contact = forwardRef((props, ref) => (
+  <StyledContact id="contact" ref={ref}>
+    <SectionHeader>Contact</SectionHeader>
+    <p>This is the contact section.</p>
+  </StyledContact>
+));
 
 export default Contact;

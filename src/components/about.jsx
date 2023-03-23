@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 import { SectionHeader } from '../common/common-styles';
@@ -84,36 +85,34 @@ const StrongText = styled.strong`
 
 //-------------------------------------------------------------------------------------------------
 
-function About() {
-  return (
-    <StyledAbout id="about">
-      <HeaderGroup>
-        <HeaderText>I am</HeaderText>
-        <HeaderTitle>Pete Vasiljev</HeaderTitle>
-      </HeaderGroup>
-      <Line />
-      <AboutContent>
-        <AboutHeader>About</AboutHeader>
-        <AboutTextGroup>
-          <AboutText>
-            My goal is to become a full-time web developer. My earliest experience with computers
-            was in the 90&apos;s as a kid playing DOS games. Eventually, I decided to work towards
-            a degree in computer science. My interest in web development began during my final
-            semesters where I worked with a couple groups to build full-stack web applications.
-          </AboutText>
-          <AboutText>
-            My focus is on front-end web development, although I have some experience with{' '}
-            <StrongText>Flask</StrongText>, <StrongText>MongoDB</StrongText>,{' '}
-            <StrongText>Firebase</StrongText>, and <StrongText> MySQL</StrongText>. There is so
-            much to learn about web development and I find myself experimenting with different ways
-            to build projects. I currently prefer to build my projects using{' '}
-            <StrongText>React</StrongText>, <StrongText>Vite</StrongText>, and{' '}
-            <StrongText>Styled Components</StrongText>.
-          </AboutText>
-        </AboutTextGroup>
-      </AboutContent>
-    </StyledAbout>
-  );
-}
+const About = forwardRef((props, ref) => (
+  <StyledAbout id="about" ref={ref}>
+    <HeaderGroup>
+      <HeaderText>I am</HeaderText>
+      <HeaderTitle>Pete Vasiljev</HeaderTitle>
+    </HeaderGroup>
+    <Line />
+    <AboutContent>
+      <AboutHeader>About</AboutHeader>
+      <AboutTextGroup>
+        <AboutText>
+          My goal is to become a full-time web developer. My earliest experience with computers was
+          in the 90&apos;s as a kid playing DOS games. Eventually, I decided to work towards a
+          degree in computer science. My interest in web development began during my final
+          semesters where I worked with a couple groups to build full-stack web applications.
+        </AboutText>
+        <AboutText>
+          My focus is on front-end web development, although I have some experience with{' '}
+          <StrongText>Flask</StrongText>, <StrongText>MongoDB</StrongText>,{' '}
+          <StrongText>Firebase</StrongText>, and <StrongText> MySQL</StrongText>. There is so much
+          to learn about web development and I find myself experimenting with different ways to
+          build projects. I currently prefer to build my projects using{' '}
+          <StrongText>React</StrongText>, <StrongText>Vite</StrongText>, and{' '}
+          <StrongText>Styled Components</StrongText>.
+        </AboutText>
+      </AboutTextGroup>
+    </AboutContent>
+  </StyledAbout>
+));
 
 export default About;

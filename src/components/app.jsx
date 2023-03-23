@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import '../common/reset.css';
@@ -24,6 +24,11 @@ const Blank = styled.div`
 
 function App() {
   const [renderApp, setRenderApp] = useState(false);
+  const [currentSection, setCurrentSection] = useState('about');
+
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
   /**
    * Loads the primary font file and renders the app when loading has finished so that FOUC is
@@ -42,16 +47,52 @@ function App() {
       .finally(() => setRenderApp(true));
   }, []);
 
+  /**
+   * Determines which section is currently active so that the nav bar can be updated.
+   */
+  useEffect(() => {
+    if (!renderApp) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (let i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) {
+            switch (entries[i].target.id) {
+              case 'about':
+                setCurrentSection('about');
+                break;
+              case 'projects':
+                setCurrentSection('projects');
+                break;
+              case 'contact':
+                setCurrentSection('contact');
+                break;
+              default:
+                console.error('Unexpected IntersectionObserverEntry target id');
+            }
+
+            break;
+          }
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(aboutRef.current);
+    observer.observe(projectsRef.current);
+    observer.observe(contactRef.current);
+  }, [renderApp]);
+
   return (
     <>
       <GlobalStyle />
       {renderApp ? (
         <StyledApp>
-          <Header />
+          <Header currentSection={currentSection} />
           <main>
-            <About />
-            <Projects />
-            <Contact />
+            <About ref={aboutRef} />
+            <Projects ref={projectsRef} />
+            <Contact ref={contactRef} />
           </main>
           <footer>
             <p>This is the footer.</p>
