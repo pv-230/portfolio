@@ -9,9 +9,9 @@ const GlobalStyle = createGlobalStyle`
 
     --light-90: hsl(0, 0%, 90%);
     --dark-10: hsl(0, 0%, 10%);
-    --dark-20: hsl(0, 0%, 17%);
+    --dark-20: hsl(0, 0%, 20%);
     --gold: hsl(50, 75%, 50%);
-    --green: hsl(120, 75%, 50%);
+    --green: hsl(120, 50%, 50%);
     --red: hsl(0, 75%, 50%);
   }
 
