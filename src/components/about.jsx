@@ -29,6 +29,7 @@ const HeaderText = styled.p`
 
 const HeaderTitle = styled.h1`
   font-size: 2.75rem;
+  text-align: center;
   color: var(--gold-font-color);
   opacity: 0%;
   animation: 0.75s 0.75s forwards fadein;
@@ -86,7 +87,7 @@ const AboutContent = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 10px;
+  padding: 20px;
   animation: 0.75s 2.25s forwards darken-bg;
 
   @keyframes darken-bg {
