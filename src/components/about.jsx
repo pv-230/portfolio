@@ -11,7 +11,7 @@ const StyledAbout = styled.div`
   padding: 20px;
   padding-top: calc(var(--header-height) + 40px);
   gap: 40px;
-  color: var(--light-90);
+  color: var(--light-font-color);
 `;
 
 const HeaderGroup = styled.hgroup`
@@ -29,7 +29,7 @@ const HeaderText = styled.p`
 
 const HeaderTitle = styled.h1`
   font-size: 2.75rem;
-  color: var(--gold);
+  color: var(--gold-font-color);
   opacity: 0%;
   animation: 0.75s 0.75s forwards fadein;
 `;
@@ -40,11 +40,11 @@ const Line = styled.div`
   background-image: ${({ vertical, halfLeft, halfRight }) =>
     `linear-gradient(to ${vertical ? 'bottom' : 'right'}, ${
       halfLeft
-        ? 'hsl(0, 0%, 50%), hsl(0, 0%, 25%)'
+        ? 'var(--gray-border-color), var(--halfgray-border-color)'
         : `${
             halfRight
-              ? 'hsl(0, 0%, 25%) 50%, hsl(0, 0%, 50%)'
-              : 'hsl(0, 0%, 50%), hsl(0, 0%, 25%) 50%, hsl(0, 0%, 50%)'
+              ? 'var(--halfgray-border-color), hsl(0, 0%, 50%)'
+              : 'var(--gray-border-color), var(--halfgray-border-color), var(--gray-border-color)'
           }`
     })`};
   animation: ${({ delay, vertical }) =>
@@ -95,7 +95,7 @@ const AboutContent = styled.section`
     }
 
     to {
-      background-color: var(--dark-5);
+      background-color: var(--darker-bg-color);
     }
   }
 `;
@@ -121,7 +121,7 @@ const AboutText = styled.p`
 `;
 
 const StrongText = styled.strong`
-  color: var(--green);
+  color: var(--green-font-color);
 `;
 
 //-------------------------------------------------------------------------------------------------

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { StyledSection, SectionHeader } from '../common/common-styles';
 
 const StyledContact = styled(StyledSection)`
-  color: var(--light-90);
+  color: var(--light-font-color);
 `;
 
 //-------------------------------------------------------------------------------------------------

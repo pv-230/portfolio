@@ -8,13 +8,15 @@ const GlobalStyle = createGlobalStyle`
     --header-height: 50px;
     --content-max-width: 800px;
 
-    --light-90: hsl(0, 0%, 90%);
-    --dark-5: hsl(0, 0%, 5%);
-    --dark-10: hsl(0, 0%, 10%);
-    --dark-20: hsl(0, 0%, 20%);
-    --gold: hsl(50, 75%, 50%);
-    --green: hsl(120, 50%, 50%);
-    --red: hsl(0, 75%, 50%);
+    --light-font-color: hsl(0, 0%, 75%);
+    --gold-font-color: hsl(50, 75%, 50%);
+    --green-font-color: hsl(120, 50%, 50%);
+
+    --dark-bg-color: hsl(0, 0%, 10%);
+    --darker-bg-color: hsl(0, 0%, 7.5%);
+
+    --gray-border-color: hsl(0, 0%, 50%);
+    --halfgray-border-color: hsl(0, 0%, 25%)
   }
 
   *,

@@ -7,8 +7,8 @@ const StyledHeader = styled.header`
   align-items: center;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--dark-20);
-  border-bottom: 1px solid hsl(0, 0%, 50%);
+  background-color: var(--darker-bg-color);
+  border-bottom: 1px solid var(--halfgray-border-color);
   gap: 20px;
   position: fixed;
   top: 0;
@@ -27,21 +27,22 @@ const NavLink = styled.a`
   text-align: center;
   padding: 5px;
   font-size: 1.2rem;
-  color: ${({ active }) => (active ? 'var(--gold)' : 'var(--light-90)')};
+  color: ${({ active }) => (active ? 'var(--gold-font-color)' : 'var(--light-font-color)')};
   text-decoration: none;
   border-top: 5px solid transparent;
-  border-bottom: ${({ active }) => (active ? '5px solid var(--gold)' : '5px solid transparent')};
+  border-bottom: ${({ active }) =>
+    active ? '5px solid var(--gold-font-color)' : '5px solid transparent'};
 
   &:focus-visible {
     outline: 2px solid var(--red);
-    color: var(--gold);
-    border-bottom: 5px solid var(--gold);
+    color: var(--gold-font-color);
+    border-bottom: 5px solid var(--gold-font-color);
   }
 
   @media (hover: hover) {
     &:hover {
-      color: var(--gold);
-      border-bottom: 5px solid var(--gold);
+      color: var(--gold-font-color);
+      border-bottom: 5px solid var(--gold-font-color);
     }
   }
 `;

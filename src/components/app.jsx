@@ -12,12 +12,12 @@ const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--dark-10);
+  background-color: var(--dark-bg-color);
 `;
 
 const Blank = styled.div`
   height: 100%;
-  background-color: var(--dark-10);
+  background-color: var(--dark-bg-color);
 `;
 
 //-------------------------------------------------------------------------------------------------
