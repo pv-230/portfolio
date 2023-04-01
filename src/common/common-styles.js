@@ -4,7 +4,7 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 600px;
+  max-width: var(--content-max-width);
   min-height: 100vh;
   padding: 20px;
   padding-top: calc(var(--header-height) + 20px);

@@ -6,8 +6,10 @@ const GlobalStyle = createGlobalStyle`
       'Segoe UI Emoji', 'Segoe UI Symbol';
     
     --header-height: 50px;
+    --content-max-width: 800px;
 
     --light-90: hsl(0, 0%, 90%);
+    --dark-5: hsl(0, 0%, 5%);
     --dark-10: hsl(0, 0%, 10%);
     --dark-20: hsl(0, 0%, 20%);
     --gold: hsl(50, 75%, 50%);
