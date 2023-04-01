@@ -8,10 +8,13 @@ const StyledHeader = styled.header`
   width: 100%;
   height: var(--header-height);
   background-color: var(--dark-20);
+  border-bottom: 1px solid hsl(0, 0%, 50%);
   gap: 20px;
   position: fixed;
   top: 0;
   z-index: 1;
+  opacity: 0%;
+  animation: 0.75s linear 1.5s forwards fadein;
 `;
 
 const NavList = styled.nav`
