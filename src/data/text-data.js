@@ -50,7 +50,8 @@ const projects = [
     name: 'CS Semester Planner',
     description:
       'Group term project that suggests various ways to register for classes each ' +
-      "semester based on a student's completed prerequisites and the degree requirements.",
+      "semester based on an FSU computer science student's completed prerequisites and the " +
+      'degree requirements.',
     tech: ['React', 'Jest', 'React Testing Library', 'React Router', 'Firebase'],
     liveLink: null,
     githubLink: 'https://github.com/pv-230/se-capstone-web-app',
