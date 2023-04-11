@@ -49,6 +49,7 @@ function App() {
 
   /**
    * Determines which section is currently active so that the nav bar can be updated.
+   * TODO: Adjust observed elements to fix inaccurate nav bar highlighting.
    */
   useEffect(() => {
     if (!renderApp) return;
