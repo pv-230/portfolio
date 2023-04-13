@@ -15,6 +15,30 @@ const StyledApp = styled.div`
   background-color: var(--dark-bg-color);
 `;
 
+// TODO: Add attribution somewhere (footer probably)
+// Photo by <a href="https://unsplash.com/@denitdao?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Denys Churchyn</a> on <a href="https://unsplash.com/photos/Kwmz_c_NiYk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+const BackgroundImage = styled.div`
+  background-image: url('src/assets/space-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  transform: scale(1.5);
+  opacity: 0%;
+  animation: 30s linear infinite alternate slow-zoom, 2s 2.25s forwards fadein;
+
+  @keyframes slow-zoom {
+    to {
+      transform: scale(1);
+    }
+  }
+`;
+
+const StyledMain = styled.main`
+  z-index: 1;
+`;
+
 const Blank = styled.div`
   height: 100%;
   background-color: var(--dark-bg-color);
@@ -89,12 +113,13 @@ function App() {
       <GlobalStyle />
       {renderApp ? (
         <StyledApp>
+          <BackgroundImage />
           <Header currentSection={currentSection} />
-          <main>
+          <StyledMain>
             <About ref={aboutRef} />
             <Projects ref={projectsRef} />
             <Contact ref={contactRef} />
-          </main>
+          </StyledMain>
           <footer>
             <p>This is the footer.</p>
           </footer>
