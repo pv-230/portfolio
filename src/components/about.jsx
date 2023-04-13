@@ -6,6 +6,7 @@ import { SectionHeader } from '../common/common-styles';
 const StyledAbout = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: var(--content-max-width);
   min-height: 100vh;
   padding: 20px;
@@ -55,20 +56,12 @@ const Line = styled.div`
   justify-self: ${({ justify }) => justify};
 
   @keyframes stretch-width {
-    from {
-      width: 0px;
-    }
-
     to {
       width: 100%;
     }
   }
 
   @keyframes stretch-height {
-    from {
-      height: 0px;
-    }
-
     to {
       height: 100%;
     }
@@ -91,12 +84,8 @@ const AboutContent = styled.section`
   animation: 0.75s 2.25s forwards darken-bg;
 
   @keyframes darken-bg {
-    from {
-      background-color: initial;
-    }
-
     to {
-      background-color: var(--darker-bg-color);
+      background-color: var(--darker-bg-color-alpha);
     }
   }
 `;
