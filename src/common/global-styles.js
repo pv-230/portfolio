@@ -13,7 +13,8 @@ const GlobalStyle = createGlobalStyle`
     --green-font-color: hsl(120, 50%, 50%);
 
     --dark-bg-color: hsl(0, 0%, 10%);
-    --darker-bg-color: hsl(0, 0%, 7.5%);
+    --darker-bg-color: hsl(0, 0%, 5%);
+    --darker-bg-color-alpha: hsl(0, 0%, 5%, 85%);
 
     --gray-border-color: hsl(0, 0%, 50%);
     --halfgray-border-color: hsl(0, 0%, 25%)
@@ -33,10 +34,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @keyframes fadein {
-    from {
-      opacity: 0%;
-    }
-    
     to {
       opacity: 100%;
     }
