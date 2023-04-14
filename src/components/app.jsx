@@ -29,15 +29,9 @@ const StyledMain = styled.main`
   z-index: 1;
 `;
 
-const Blank = styled.div`
-  height: 100%;
-  background-color: var(--dark-bg-color);
-`;
-
 //-------------------------------------------------------------------------------------------------
 
 function App() {
-  const [renderApp, setRenderApp] = useState(false);
   const [currentSection, setCurrentSection] = useState('about');
 
   const aboutRef = useRef(null);
@@ -45,29 +39,10 @@ function App() {
   const contactRef = useRef(null);
 
   /**
-   * Loads the primary font file and renders the app when loading has finished so that FOUC is
-   * is avoided. Fallback fonts will be used if an error is received during loading.
-   */
-  useEffect(() => {
-    const font = new FontFace(
-      'Source Sans Pro',
-      'url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lqDY.woff2)'
-    );
-
-    document.fonts.add(font);
-    font.load();
-    document.fonts.ready
-      .catch((err) => console.error(`Unable to load 'Source Sans Pro' font: ${err.message}`))
-      .finally(() => setRenderApp(true));
-  }, []);
-
-  /**
    * Determines which section is currently active so that the nav bar can be updated.
    * TODO: Adjust observed elements to fix inaccurate nav bar highlighting.
    */
   useEffect(() => {
-    if (!renderApp) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         for (let i = 0; i < entries.length; i++) {
@@ -96,27 +71,23 @@ function App() {
     observer.observe(aboutRef.current);
     observer.observe(projectsRef.current);
     observer.observe(contactRef.current);
-  }, [renderApp]);
+  }, []);
 
   return (
     <>
       <GlobalStyle />
-      {renderApp ? (
-        <StyledApp>
-          <BackgroundImage />
-          <Header currentSection={currentSection} />
-          <StyledMain>
-            <About ref={aboutRef} />
-            <Projects ref={projectsRef} />
-            <Contact ref={contactRef} />
-          </StyledMain>
-          <footer>
-            <p>This is the footer.</p>
-          </footer>
-        </StyledApp>
-      ) : (
-        <Blank />
-      )}
+      <StyledApp>
+        <BackgroundImage />
+        <Header currentSection={currentSection} />
+        <StyledMain>
+          <About ref={aboutRef} />
+          <Projects ref={projectsRef} />
+          <Contact ref={contactRef} />
+        </StyledMain>
+        <footer>
+          <p>This is the footer.</p>
+        </footer>
+      </StyledApp>
     </>
   );
 }
