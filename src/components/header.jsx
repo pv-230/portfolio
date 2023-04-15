@@ -12,7 +12,7 @@ const StyledHeader = styled.header`
   gap: 20px;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1;
   opacity: 0%;
   animation: 0.75s linear 2.25s forwards fadein;
 `;

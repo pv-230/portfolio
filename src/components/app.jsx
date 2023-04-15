@@ -9,24 +9,10 @@ import Projects from './projects';
 import Contact from './contact';
 
 const StyledApp = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: var(--light-font-color);
   background-color: var(--dark-bg-color);
-`;
-
-const BackgroundImage = styled.div`
   background-image: url('src/assets/circuit.svg');
   background-position: center;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  opacity: 0%;
-  animation: 2s linear 2.25s forwards fadein;
-`;
-
-const StyledMain = styled.main`
-  z-index: 1;
 `;
 
 //-------------------------------------------------------------------------------------------------
@@ -77,16 +63,12 @@ function App() {
     <>
       <GlobalStyle />
       <StyledApp>
-        <BackgroundImage />
         <Header currentSection={currentSection} />
-        <StyledMain>
+        <main>
           <About ref={aboutRef} />
           <Projects ref={projectsRef} />
           <Contact ref={contactRef} />
-        </StyledMain>
-        <footer>
-          <p>This is the footer.</p>
-        </footer>
+        </main>
       </StyledApp>
     </>
   );

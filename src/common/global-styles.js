@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     --gold-font-color: hsl(50, 75%, 50%);
     --green-font-color: hsl(120, 50%, 50%);
 
-    --dark-bg-color: hsl(0, 0%, 10%);
+    --dark-bg-color: hsl(0, 0%, 9%);
     --darker-bg-color: hsl(0, 0%, 5%);
     --darker-bg-color-alpha: hsl(0, 0%, 5%, 85%);
 
