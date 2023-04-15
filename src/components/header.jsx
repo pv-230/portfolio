@@ -13,8 +13,6 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   z-index: 1;
-  opacity: 0%;
-  animation: 0.75s linear 2.25s forwards fadein;
 `;
 
 const NavList = styled.nav`
