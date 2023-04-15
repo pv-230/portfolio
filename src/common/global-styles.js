@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
 
     --dark-bg-color: hsl(0, 0%, 9%);
     --darker-bg-color: hsl(0, 0%, 5%);
-    --darker-bg-color-alpha: hsl(0, 0%, 5%, 85%);
 
     --gray-border-color: hsl(0, 0%, 50%);
     --halfgray-border-color: hsl(0, 0%, 25%)

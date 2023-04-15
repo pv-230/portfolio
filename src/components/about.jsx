@@ -103,7 +103,7 @@ const AboutSection = styled.section`
 
   @keyframes darken-bg {
     to {
-      background-color: var(--darker-bg-color-alpha);
+      background-color: var(--darker-bg-color);
     }
   }
 `;
