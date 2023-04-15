@@ -4,8 +4,12 @@ import styled from 'styled-components';
 import { StyledSection, SectionHeader } from '../common/common-styles';
 import projects from '../data/text-data';
 
-const StyledProjects = styled(StyledSection)`
-  color: var(--light-font-color);
+const StyledProjects = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--dark-bg-color);
 `;
 
 const ProjectsHeader = styled(SectionHeader)`
@@ -36,16 +40,18 @@ const ProjectTitle = styled.h3`
 //-------------------------------------------------------------------------------------------------
 
 const Projects = forwardRef((props, ref) => (
-  <StyledProjects id="projects" ref={ref}>
-    <ProjectsHeader>Projects</ProjectsHeader>
-    <ProjectsList>
-      {projects.map((project) => (
-        <ProjectInfo key={project.name}>
-          <ProjectTitle>{project.name}</ProjectTitle>
-          <p>{project.description}</p>
-        </ProjectInfo>
-      ))}
-    </ProjectsList>
+  <StyledProjects>
+    <StyledSection id="projects" ref={ref}>
+      <ProjectsHeader>Projects</ProjectsHeader>
+      <ProjectsList>
+        {projects.map((project) => (
+          <ProjectInfo key={project.name}>
+            <ProjectTitle>{project.name}</ProjectTitle>
+            <p>{project.description}</p>
+          </ProjectInfo>
+        ))}
+      </ProjectsList>
+    </StyledSection>
   </StyledProjects>
 ));
 
