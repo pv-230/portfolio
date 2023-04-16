@@ -2,6 +2,7 @@ import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 import { StyledSection, SectionHeader } from '../common/common-styles';
+import Project from './project';
 import projects from '../data/text-data';
 
 const StyledProjects = styled.div`
@@ -23,20 +24,6 @@ const ProjectsList = styled.div`
   gap: 20px;
 `;
 
-const ProjectInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px;
-  border: 2px solid var(--gray-border-color);
-  border-radius: 5px;
-  background-color: var(--darker-bg-color);
-`;
-
-const ProjectTitle = styled.h3`
-  font-size: 1.2rem;
-`;
-
 //-------------------------------------------------------------------------------------------------
 
 const Projects = forwardRef((props, ref) => (
@@ -45,10 +32,7 @@ const Projects = forwardRef((props, ref) => (
       <ProjectsHeader>Projects</ProjectsHeader>
       <ProjectsList>
         {projects.map((project) => (
-          <ProjectInfo key={project.name}>
-            <ProjectTitle>{project.name}</ProjectTitle>
-            <p>{project.description}</p>
-          </ProjectInfo>
+          <Project project={project} key={project.name} />
         ))}
       </ProjectsList>
     </StyledSection>

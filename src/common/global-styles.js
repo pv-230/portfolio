@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     --content-max-width: 820px;
 
     --light-font-color: hsl(0, 0%, 75%);
+    --light-font-color-2: hsl(0, 0%, 50%);
     --gold-font-color: hsl(50, 75%, 50%);
     --green-font-color: hsl(120, 50%, 50%);
     
