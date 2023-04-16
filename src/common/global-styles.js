@@ -39,6 +39,12 @@ const GlobalStyle = createGlobalStyle`
       opacity: 100%;
     }
   }
+
+  @keyframes reveal {
+    to {
+      background-color: transparent;
+    }
+  }
 `;
 
 export default GlobalStyle;

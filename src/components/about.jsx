@@ -11,17 +11,13 @@ const Hero = styled.div`
   min-height: 100vh;
   background-color: var(--dark-bg-color);
   animation: 0.75s linear 2.25s forwards reveal;
-
-  @keyframes reveal {
-    to {
-      background-color: transparent;
-    }
-  }
 `;
 
 const HeroFade = styled.div`
   height: 10vh;
+  background-color: var(--dark-bg-color);
   background-image: linear-gradient(transparent, var(--dark-bg-color));
+  animation: 0.75s linear 2.25s forwards reveal;
 `;
 
 const AboutWrapper = styled.div`
