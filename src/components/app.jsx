@@ -7,11 +7,12 @@ import Header from './header';
 import About from './about';
 import Projects from './projects';
 import Contact from './contact';
+import circuit from '../assets/svg/circuit.svg';
 
 const StyledApp = styled.div`
   color: var(--light-font-color);
   background-color: var(--dark-bg-color);
-  background-image: url('src/assets/circuit.svg');
+  background-image: url(${circuit});
   background-position: center;
 `;
 
