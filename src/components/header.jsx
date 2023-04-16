@@ -32,9 +32,10 @@ const NavLink = styled.a`
     active ? '5px solid var(--gold-font-color)' : '5px solid transparent'};
 
   &:focus-visible {
-    outline: 2px solid var(--red);
+    outline: 2px solid var(--red-border-color);
     color: var(--gold-font-color);
     border-bottom: 5px solid var(--gold-font-color);
+    border-radius: 5px;
   }
 
   @media (hover: hover) {
