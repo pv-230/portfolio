@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import ProjectTech from './project-tech';
+
 const StyledProject = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,11 +11,6 @@ const StyledProject = styled.div`
   gap: 10px;
   border-top: 1px dashed gray;
   padding-top: 10px;
-`;
-
-const ProjectTech = styled.div`
-  display: flex;
-  gap: 10px;
 `;
 
 const ProjectHeader = styled.h3`
@@ -43,6 +40,8 @@ const StyledAnchor = styled.a`
   }
 `;
 
+//-------------------------------------------------------------------------------------------------
+
 function Project({ project }) {
   return (
     <StyledProject>
@@ -52,11 +51,7 @@ function Project({ project }) {
         {project.liveLink && '|'}
         <StyledAnchor href={project.githubLink}>Source</StyledAnchor>
       </Links>
-      <ProjectTech>
-        {project.tech.map((tech) => (
-          <img src="" alt={tech} key={tech} />
-        ))}
-      </ProjectTech>
+      <ProjectTech techArr={project.tech} />
       <p>{project.description}</p>
     </StyledProject>
   );
