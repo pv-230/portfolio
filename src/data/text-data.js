@@ -4,7 +4,7 @@ const projects = [
     description:
       'How fast can you find Waldo and the others? Choose between three scenes and submit your ' +
       'time to the leaderboard.',
-    tech: ['React', 'React Router', 'Firebase', 'Styled Components'],
+    tech: ['React', 'React Router', 'Firebase', 'Styled Components', 'Create React App'],
     liveLink: 'https://pv-230.github.io/odin-wheres-waldo/',
     githubLink: 'https://github.com/pv-230/odin-wheres-waldo',
   },
@@ -28,12 +28,12 @@ const projects = [
     githubLink: 'https://github.com/pv-230/odin-memory-card',
   },
   {
-    name: 'Simple Shopping Website',
+    name: 'Shopping Website',
     description:
       'Shop for fruits and manage your cart. This project was created to practice ' +
       'using Jest with React Testing Library and to also practice creating a single page app with ' +
       'React Router.',
-    tech: ['React', 'Jest', 'React Testing Library', 'React Router'],
+    tech: ['React', 'Jest', 'Testing Library', 'React Router'],
     liveLink: 'https://pv-230.github.io/odin-shopping-cart/',
     githubLink: 'https://github.com/pv-230/odin-shopping-cart',
   },
@@ -42,17 +42,17 @@ const projects = [
     description:
       'Group term project that tries to recreate the learning management system known by ' +
       'students and teachers as Canvas. Visit the GitHub link for more details.',
-    tech: ['Flask', 'MongoDB', 'Docker', 'Pytest'],
+    tech: ['Flask', 'MongoDB', 'Docker', 'Pytest', 'Jinja'],
     liveLink: null,
     githubLink: 'https://github.com/pv-230/canvas2-web-app',
   },
   {
-    name: 'CS Semester Planner',
+    name: 'Semester Planner',
     description:
       'Group term project that suggests various ways to register for classes each ' +
       "semester based on an FSU computer science student's completed prerequisites and the " +
       'degree requirements.',
-    tech: ['React', 'Jest', 'React Testing Library', 'React Router', 'Firebase'],
+    tech: ['React', 'Jest', 'Testing Library', 'React Router', 'Firebase', 'Create React App'],
     liveLink: null,
     githubLink: 'https://github.com/pv-230/se-capstone-web-app',
   },
