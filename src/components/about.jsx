@@ -38,12 +38,14 @@ const HeaderGroup = styled.hgroup`
 
 const HeaderText = styled.p`
   font-size: 2rem;
+  font-weight: 500;
   opacity: 0%;
   animation: 0.75s forwards fadein;
 `;
 
 const HeaderTitle = styled.h1`
   font-size: 2.75rem;
+  font-weight: 500;
   text-align: center;
   color: var(--gold-font-color);
   opacity: 0%;
@@ -106,6 +108,7 @@ const AboutSection = styled.section`
 
 const AboutHeader = styled(SectionHeader)`
   font-size: 2.2rem;
+  font-weight: 500;
   opacity: 0%;
   animation: 0.75s 2.25s forwards fadein;
 `;
@@ -126,6 +129,7 @@ const AboutText = styled.p`
 
 const StrongText = styled.strong`
   color: var(--green-font-color);
+  font-weight: 500;
 `;
 
 //-------------------------------------------------------------------------------------------------
