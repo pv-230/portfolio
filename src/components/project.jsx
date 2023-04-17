@@ -15,6 +15,14 @@ const StyledProject = styled.div`
 
 const ProjectHeader = styled.h3`
   font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+`;
+
+const ProjectSummary = styled.p`
+  font-size: 1.3rem;
+  font-weight: 300;
   text-transform: uppercase;
   text-align: center;
 `;
@@ -40,19 +48,22 @@ const StyledAnchor = styled.a`
   }
 `;
 
+const ProjectDetails = styled.p``;
+
 //-------------------------------------------------------------------------------------------------
 
 function Project({ project }) {
   return (
     <StyledProject>
       <ProjectHeader>{project.name}</ProjectHeader>
+      <ProjectSummary>{project.summary}</ProjectSummary>
       <Links>
         {project.liveLink && <StyledAnchor href={project.liveLink}>Demo</StyledAnchor>}
         {project.liveLink && '|'}
         <StyledAnchor href={project.githubLink}>Source</StyledAnchor>
       </Links>
       <ProjectTech techArr={project.tech} />
-      <p>{project.description}</p>
+      <ProjectDetails>{project.details}</ProjectDetails>
     </StyledProject>
   );
 }
@@ -60,7 +71,8 @@ function Project({ project }) {
 Project.propTypes = {
   project: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
+    details: PropTypes.string.isRequired,
     tech: PropTypes.arrayOf(PropTypes.string),
     liveLink: PropTypes.string,
     githubLink: PropTypes.string.isRequired,
