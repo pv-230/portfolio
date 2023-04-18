@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 
-import { SectionHeader } from '../common/common-styles';
+import { SectionHeader, AdaptiveParagraph } from '../common/common-styles';
 
 const Hero = styled.div`
   display: flex;
@@ -113,9 +113,7 @@ const AboutHeader = styled(SectionHeader)`
   animation: 0.75s 2.25s forwards fadein;
 `;
 
-const AboutText = styled.p`
-  line-height: clamp(1.2rem, 3vw, 1.6rem);
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
+const AboutText = styled(AdaptiveParagraph)`
   opacity: 0%;
 
   &:nth-of-type(1) {

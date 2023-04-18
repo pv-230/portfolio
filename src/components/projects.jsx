@@ -13,29 +13,33 @@ const StyledProjects = styled.div`
   background-color: var(--dark-bg-color);
 `;
 
+const ProjectSection = styled(StyledSection)`
+  gap: calc(var(--header-height) + 20px);
+`;
+
 const ProjectsHeader = styled(SectionHeader)`
-  font-size: 2.75rem;
+  font-size: 4rem;
+  font-weight: 500;
   color: var(--gold-font-color);
 `;
 
 const ProjectsList = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
 `;
 
 //-------------------------------------------------------------------------------------------------
 
 const Projects = forwardRef((props, ref) => (
   <StyledProjects>
-    <StyledSection id="projects" ref={ref}>
+    <ProjectSection id="projects" ref={ref}>
       <ProjectsHeader>Projects</ProjectsHeader>
       <ProjectsList>
         {projects.map((project) => (
           <Project project={project} key={project.name} />
         ))}
       </ProjectsList>
-    </StyledSection>
+    </ProjectSection>
   </StyledProjects>
 ));
 

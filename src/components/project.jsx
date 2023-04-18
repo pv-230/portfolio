@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import ProjectTech from './project-tech';
+import { AdaptiveParagraph } from '../common/common-styles';
 
 const StyledProject = styled.div`
   display: flex;
@@ -9,8 +10,8 @@ const StyledProject = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-top: 1px dashed gray;
-  padding-top: 10px;
+  border-top: 1px dashed hsl(0, 0%, 30%);
+  padding: 40px 0;
 `;
 
 const ProjectHeader = styled.h3`
@@ -20,8 +21,8 @@ const ProjectHeader = styled.h3`
   text-align: center;
 `;
 
-const ProjectSummary = styled.p`
-  font-size: 1.3rem;
+const ProjectSummary = styled(AdaptiveParagraph)`
+  color: darkgray;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -29,26 +30,17 @@ const ProjectSummary = styled.p`
 
 const Links = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 20px;
 `;
 
 const StyledAnchor = styled.a`
   text-transform: uppercase;
-
-  &:link {
-    color: var(--light-font-color);
-  }
-
-  &:visited {
-    color: var(--light-font-color-2);
-  }
+  color: var(--light-font-color);
 
   &:active {
     color: var(--light-font-color-2);
   }
 `;
-
-const ProjectDetails = styled.p``;
 
 //-------------------------------------------------------------------------------------------------
 
@@ -59,11 +51,10 @@ function Project({ project }) {
       <ProjectSummary>{project.summary}</ProjectSummary>
       <Links>
         {project.liveLink && <StyledAnchor href={project.liveLink}>Demo</StyledAnchor>}
-        {project.liveLink && '|'}
         <StyledAnchor href={project.githubLink}>Source</StyledAnchor>
       </Links>
       <ProjectTech techArr={project.tech} />
-      <ProjectDetails>{project.details}</ProjectDetails>
+      <AdaptiveParagraph>{project.details}</AdaptiveParagraph>
     </StyledProject>
   );
 }

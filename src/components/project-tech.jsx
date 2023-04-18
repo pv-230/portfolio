@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const TechList = styled.div`
   display: flex;
   gap: 10px;
+  padding: 20px 0;
 `;
 
 const TechIcon = styled.img`
