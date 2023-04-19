@@ -7,8 +7,8 @@ const StyledHeader = styled.header`
   align-items: center;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--darker-bg-color);
-  border-bottom: 1px solid var(--halfgray-border-color);
+  background-color: var(--color-neutral-10);
+  border-bottom: 1px solid var(--color-neutral-7);
   gap: 20px;
   position: fixed;
   top: 0;
@@ -25,23 +25,23 @@ const NavLink = styled.a`
   text-align: center;
   padding: 5px;
   font-size: 1.2rem;
-  color: ${({ active }) => (active ? 'var(--gold-font-color)' : 'var(--light-font-color)')};
+  color: ${({ active }) => (active ? 'var(--color-gold)' : 'inherit')};
   text-decoration: none;
   border-top: 5px solid transparent;
   border-bottom: ${({ active }) =>
-    active ? '5px solid var(--gold-font-color)' : '5px solid transparent'};
+    active ? '5px solid var(--color-gold)' : '5px solid transparent'};
 
   &:focus-visible {
-    outline: 2px solid var(--red-border-color);
-    color: var(--gold-font-color);
-    border-bottom: 5px solid var(--gold-font-color);
+    outline: 2px solid var(--color-red);
+    color: var(--color-gold);
+    border-bottom: 5px solid var(--color-gold);
     border-radius: 5px;
   }
 
   @media (hover: hover) {
     &:hover {
-      color: var(--gold-font-color);
-      border-bottom: 5px solid var(--gold-font-color);
+      color: var(--color-gold);
+      border-bottom: 5px solid var(--color-gold);
     }
   }
 `;

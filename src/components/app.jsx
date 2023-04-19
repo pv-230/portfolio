@@ -10,8 +10,8 @@ import Contact from './contact';
 import circuit from '../assets/svg/circuit.svg';
 
 const StyledApp = styled.div`
-  color: var(--light-font-color);
-  background-color: var(--dark-bg-color);
+  color: var(--color-primary-font);
+  background-color: var(--color-app-bg);
   background-image: url(${circuit});
   background-position: center;
 `;

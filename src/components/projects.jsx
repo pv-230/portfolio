@@ -10,7 +10,7 @@ const StyledProjects = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: var(--dark-bg-color);
+  background-color: var(--color-app-bg);
 `;
 
 const ProjectSection = styled(StyledSection)`
@@ -20,7 +20,7 @@ const ProjectSection = styled(StyledSection)`
 const ProjectsHeader = styled(SectionHeader)`
   font-size: 4rem;
   font-weight: 500;
-  color: var(--gold-font-color);
+  color: var(--color-gold);
 `;
 
 const ProjectsList = styled.div`

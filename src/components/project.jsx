@@ -10,7 +10,7 @@ const StyledProject = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-top: 1px dashed hsl(0, 0%, 30%);
+  border-top: 1px dashed var(--color-neutral-6);
   padding: 40px 0;
 `;
 
@@ -22,7 +22,7 @@ const ProjectHeader = styled.h3`
 `;
 
 const ProjectSummary = styled(AdaptiveParagraph)`
-  color: darkgray;
+  color: var(--color-secondary-font);
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -35,10 +35,10 @@ const Links = styled.div`
 
 const StyledAnchor = styled.a`
   text-transform: uppercase;
-  color: var(--light-font-color);
+  color: var(--color-primary-font);
 
   &:active {
-    color: var(--light-font-color-2);
+    color: var(--color-neutral-5);
   }
 `;
 

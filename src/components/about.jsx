@@ -9,14 +9,14 @@ const Hero = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--dark-bg-color);
+  background-color: var(--color-app-bg);
   animation: 0.75s linear 2.25s forwards reveal;
 `;
 
 const HeroFade = styled.div`
   height: 10vh;
-  background-color: var(--dark-bg-color);
-  background-image: linear-gradient(transparent, var(--dark-bg-color));
+  background-color: var(--color-app-bg);
+  background-image: linear-gradient(transparent, var(--color-app-bg));
   animation: 0.75s linear 2.25s forwards reveal;
 `;
 
@@ -47,7 +47,7 @@ const HeaderTitle = styled.h1`
   font-size: 2.75rem;
   font-weight: 500;
   text-align: center;
-  color: var(--gold-font-color);
+  color: var(--color-gold);
   opacity: 0%;
   animation: 0.75s 0.75s forwards fadein;
 `;
@@ -58,11 +58,11 @@ const Line = styled.div`
   background-image: ${({ vertical, halfLeft, halfRight }) =>
     `linear-gradient(to ${vertical ? 'bottom' : 'right'}, ${
       halfLeft
-        ? 'var(--gray-border-color), var(--halfgray-border-color)'
+        ? 'var(--color-neutral-5), var(--color-neutral-8)'
         : `${
             halfRight
-              ? 'var(--halfgray-border-color), hsl(0, 0%, 50%)'
-              : 'var(--gray-border-color), var(--halfgray-border-color), var(--gray-border-color)'
+              ? 'var(--color-neutral-8), var(--color-neutral-5)'
+              : 'var(--color-neutral-5), var(--color-neutral-8), var(--color-neutral-5)'
           }`
     })`};
   animation: ${({ delay, vertical }) =>
@@ -101,7 +101,7 @@ const AboutSection = styled.section`
 
   @keyframes darken-bg {
     to {
-      background-color: var(--darker-bg-color);
+      background-color: var(--color-neutral-10);
     }
   }
 `;
@@ -126,7 +126,7 @@ const AboutText = styled(AdaptiveParagraph)`
 `;
 
 const StrongText = styled.strong`
-  color: var(--green-font-color);
+  color: var(--color-green);
   font-weight: 500;
 `;
 
