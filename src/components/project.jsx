@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import ProjectTech from './project-tech';
-import { AdaptiveParagraph } from '../common/common-styles';
+import { ParagraphContainer, StyledParagraph } from '../common/common-styles';
 
 const StyledProject = styled.div`
   display: flex;
@@ -21,8 +21,9 @@ const ProjectHeader = styled.h3`
   text-align: center;
 `;
 
-const ProjectSummary = styled(AdaptiveParagraph)`
+const ProjectSummary = styled.p`
   color: var(--color-secondary-font);
+  font-size: 1.3rem;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -42,17 +43,6 @@ const StyledAnchor = styled.a`
   }
 `;
 
-const Details = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-
-const DetailsParagraph = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.4rem;
-`;
-
 //-------------------------------------------------------------------------------------------------
 
 function Project({ project }) {
@@ -65,12 +55,12 @@ function Project({ project }) {
         <StyledAnchor href={project.githubLink}>Source</StyledAnchor>
       </Links>
       <ProjectTech techArr={project.tech} />
-      <Details>
+      <ParagraphContainer>
         {project.details.map((paragraph, i) => (
           // eslint-disable-next-line react/no-array-index-key
-          <DetailsParagraph key={i}>{paragraph}</DetailsParagraph>
+          <StyledParagraph key={i}>{paragraph}</StyledParagraph>
         ))}
-      </Details>
+      </ParagraphContainer>
     </StyledProject>
   );
 }
