@@ -14,7 +14,7 @@ const StyledProjects = styled.div`
 `;
 
 const ProjectSection = styled(StyledSection)`
-  gap: calc(var(--header-height) + 20px);
+  gap: 40px;
 `;
 
 const ProjectsHeader = styled(SectionHeader)`

@@ -42,6 +42,17 @@ const StyledAnchor = styled.a`
   }
 `;
 
+const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+const DetailsParagraph = styled.p`
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+`;
+
 //-------------------------------------------------------------------------------------------------
 
 function Project({ project }) {
@@ -54,7 +65,12 @@ function Project({ project }) {
         <StyledAnchor href={project.githubLink}>Source</StyledAnchor>
       </Links>
       <ProjectTech techArr={project.tech} />
-      <AdaptiveParagraph>{project.details}</AdaptiveParagraph>
+      <Details>
+        {project.details.map((paragraph, i) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <DetailsParagraph key={i}>{paragraph}</DetailsParagraph>
+        ))}
+      </Details>
     </StyledProject>
   );
 }
