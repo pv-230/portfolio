@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import '../common/reset.css';
 import GlobalStyle from '../common/global-styles';
 import Header from './header';
+import Hero from './hero';
 import About from './about';
 import Projects from './projects';
 import Contact from './contact';
@@ -66,6 +67,7 @@ function App() {
       <StyledApp>
         <Header currentSection={currentSection} />
         <main>
+          <Hero />
           <About ref={aboutRef} />
           <Projects ref={projectsRef} />
           <Contact ref={contactRef} />
