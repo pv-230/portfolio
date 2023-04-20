@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 
-import { StyledSection, SectionHeader } from '../common/common-styles';
+import { StyledSection } from '../common/common-styles';
 
 const StyledContact = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const StyledContact = styled.div`
 const Contact = forwardRef((props, ref) => (
   <StyledContact id="contact" ref={ref}>
     <StyledSection>
-      <SectionHeader>Contact</SectionHeader>
+      <h2>Contact</h2>
       <p>This is the contact section.</p>
     </StyledSection>
   </StyledContact>
