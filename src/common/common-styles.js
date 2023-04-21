@@ -31,7 +31,7 @@ const ParagraphContainer = styled.div`
 
 const StyledParagraph = styled.p`
   font-size: 1.1rem;
-  line-height: 1.4rem;
+  line-height: 1.2;
 `;
 
 export { SectionContainer, StyledSection, SectionHeader, ParagraphContainer, StyledParagraph };
