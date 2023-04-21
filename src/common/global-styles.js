@@ -41,15 +41,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--system-ui);
   }
 
-  @keyframes fadein {
+  @keyframes fade-in {
     to {
       opacity: 100%;
-    }
-  }
-
-  @keyframes reveal {
-    to {
-      background-color: transparent;
     }
   }
 `;
