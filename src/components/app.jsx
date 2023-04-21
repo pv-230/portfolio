@@ -8,13 +8,16 @@ import Hero from './hero';
 import About from './about';
 import Projects from './projects';
 import Contact from './contact';
-import circuit from '../assets/svg/circuit.svg';
 
 const StyledApp = styled.div`
   color: var(--color-primary-font);
   background-color: var(--color-app-bg);
-  background-image: url(${circuit});
-  background-position: center;
+`;
+
+const StyledMain = styled.main`
+  display: flex;
+  flex-direction: column;
+  gap: min(20vh, 200px);
 `;
 
 //-------------------------------------------------------------------------------------------------
@@ -66,12 +69,12 @@ function App() {
       <GlobalStyle />
       <StyledApp>
         <Header currentSection={currentSection} />
-        <main>
+        <StyledMain>
           <Hero />
           <About ref={aboutRef} />
           <Projects ref={projectsRef} />
           <Contact ref={contactRef} />
-        </main>
+        </StyledMain>
       </StyledApp>
     </>
   );
