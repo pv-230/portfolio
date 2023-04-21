@@ -13,7 +13,7 @@ const StyledSection = styled.section`
   flex-direction: column;
   align-items: center;
   max-width: var(--content-max-width);
-  padding: 20px;
+  padding: var(--header-height) 20px;
   gap: 40px;
 `;
 
