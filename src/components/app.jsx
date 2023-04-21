@@ -23,7 +23,7 @@ const StyledMain = styled.main`
 //-------------------------------------------------------------------------------------------------
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('about');
+  const [currentSection, setCurrentSection] = useState(null);
 
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
@@ -59,9 +59,9 @@ function App() {
       { threshold: 0.5 }
     );
 
-    observer.observe(aboutRef.current);
-    observer.observe(projectsRef.current);
-    observer.observe(contactRef.current);
+    // observer.observe(aboutRef.current);
+    // observer.observe(projectsRef.current);
+    // observer.observe(contactRef.current);
   }, []);
 
   return (
