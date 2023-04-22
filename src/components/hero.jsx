@@ -87,7 +87,7 @@ const Line = styled.div`
           }`
     })`};
   animation: ${({ delay, vertical }) =>
-    `0.25s linear ${delay}s both ${vertical ? 'stretch-height' : 'stretch-width'}`};
+    `0.25s linear ${delay}s forwards ${vertical ? 'stretch-height' : 'stretch-width'}`};
   grid-column: ${({ gridColumn }) => gridColumn};
   grid-row: ${({ gridRow }) => gridRow};
   justify-self: ${({ justify }) => justify};
