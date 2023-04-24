@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     
     --header-height: 50px;
     --content-max-width: 820px;
+    --circle-size: max(300px, 50vmin);
 
     --color-neutral-1: hsl(0, 0%, 95%);
     --color-neutral-2: hsl(0, 0%, 85%);
