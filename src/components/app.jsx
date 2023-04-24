@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import '../common/reset.css';
@@ -23,57 +22,16 @@ const StyledMain = styled.main`
 //-------------------------------------------------------------------------------------------------
 
 function App() {
-  const [currentSection, setCurrentSection] = useState(null);
-
-  const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
-  const contactRef = useRef(null);
-
-  /**
-   * Determines which section is currently active so that the nav bar can be updated.
-   * TODO: Adjust observed elements to fix inaccurate nav bar highlighting.
-   */
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (let i = 0; i < entries.length; i++) {
-          if (entries[i].isIntersecting) {
-            switch (entries[i].target.id) {
-              case 'about':
-                setCurrentSection('about');
-                break;
-              case 'projects':
-                setCurrentSection('projects');
-                break;
-              case 'contact':
-                setCurrentSection('contact');
-                break;
-              default:
-                console.error('Unexpected IntersectionObserverEntry target id');
-            }
-
-            break;
-          }
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    // observer.observe(aboutRef.current);
-    // observer.observe(projectsRef.current);
-    // observer.observe(contactRef.current);
-  }, []);
-
   return (
     <>
       <GlobalStyle />
       <StyledApp>
-        <Header currentSection={currentSection} />
+        <Header />
         <StyledMain>
           <Hero />
-          <About ref={aboutRef} />
-          <Projects ref={projectsRef} />
-          <Contact ref={contactRef} />
+          <About />
+          <Projects />
+          <Contact />
         </StyledMain>
       </StyledApp>
     </>
