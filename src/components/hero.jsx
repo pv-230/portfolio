@@ -8,7 +8,7 @@ const StyledHero = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: var(--header-height) 0;
+  padding-top: var(--header-height);
   min-height: 100vh;
   background-color: var(--color-app-bg);
 `;
@@ -51,14 +51,14 @@ const Circle = styled.hgroup`
 `;
 
 const HeaderText = styled.p`
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vmin, 6rem);
   font-weight: 500;
   opacity: 0%;
   animation: 0.5s linear 2s forwards fade-in;
 `;
 
 const HeaderTitle = styled.h1`
-  font-size: 2.75rem;
+  font-size: clamp(1.5rem, 5vmin, 6rem);
   font-weight: 500;
   text-align: center;
   color: var(--color-gold);
