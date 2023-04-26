@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 import { SectionContainer, StyledSection, SectionHeader } from '../common/common-styles';
@@ -12,17 +11,20 @@ const ProjectsList = styled.div`
 
 //-------------------------------------------------------------------------------------------------
 
-const Projects = forwardRef((props, ref) => (
-  <SectionContainer>
-    <StyledSection id="projects" ref={ref}>
-      <SectionHeader>Projects</SectionHeader>
-      <ProjectsList>
-        {projects.map((project) => (
-          <Project project={project} key={project.name} />
-        ))}
-      </ProjectsList>
-    </StyledSection>
-  </SectionContainer>
-));
+function Projects() {
+  return (
+    <SectionContainer>
+      <StyledSection>
+        <SectionHeader>Projects</SectionHeader>
+        <ProjectsList>
+          {projects.map((project, i) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <Project project={project} key={i} />
+          ))}
+        </ProjectsList>
+      </StyledSection>
+    </SectionContainer>
+  );
+}
 
 export default Projects;
