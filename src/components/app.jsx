@@ -11,6 +11,7 @@ import Contact from './contact';
 const StyledApp = styled.div`
   color: var(--color-primary-font);
   background-color: var(--color-app-bg);
+  overflow-x: hidden;
 `;
 
 const StyledMain = styled.main`
