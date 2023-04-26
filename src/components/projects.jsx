@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { SectionContainer, Section, SectionHeading } from '../common/common-styles';
 import Project from './project';
-import projects from '../data/text-data';
+import projects from '../data/project-data';
 
 const ProjectsList = styled.div`
   display: flex;
