@@ -26,6 +26,7 @@ const ParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 `;
 
 const StyledParagraph = styled.p`
@@ -33,4 +34,27 @@ const StyledParagraph = styled.p`
   line-height: 1.2;
 `;
 
-export { SectionContainer, StyledSection, SectionHeader, ParagraphContainer, StyledParagraph };
+const SubheadingTitle = styled.h3`
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+`;
+
+const SubheadingText = styled.p`
+  color: var(--color-secondary-font);
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+`;
+
+export {
+  SectionContainer,
+  StyledSection,
+  SectionHeader,
+  ParagraphContainer,
+  StyledParagraph,
+  SubheadingTitle,
+  SubheadingText,
+};
