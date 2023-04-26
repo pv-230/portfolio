@@ -69,7 +69,7 @@ Project.propTypes = {
   project: PropTypes.shape({
     name: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
-    details: PropTypes.string.isRequired,
+    details: PropTypes.arrayOf(PropTypes.string).isRequired,
     tech: PropTypes.arrayOf(PropTypes.string),
     liveLink: PropTypes.string,
     githubLink: PropTypes.string.isRequired,
