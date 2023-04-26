@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { SectionContainer, StyledSection, SectionHeader } from '../common/common-styles';
+import { SectionContainer, Section, SectionHeading } from '../common/common-styles';
 import Project from './project';
 import projects from '../data/text-data';
 
@@ -14,15 +14,15 @@ const ProjectsList = styled.div`
 function Projects() {
   return (
     <SectionContainer>
-      <StyledSection>
-        <SectionHeader>Projects</SectionHeader>
+      <Section>
+        <SectionHeading>Projects</SectionHeading>
         <ProjectsList>
           {projects.map((project, i) => (
             // eslint-disable-next-line react/no-array-index-key
             <Project project={project} key={i} />
           ))}
         </ProjectsList>
-      </StyledSection>
+      </Section>
     </SectionContainer>
   );
 }

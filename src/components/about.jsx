@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 import {
   SectionContainer,
-  StyledSection,
-  SectionHeader,
+  Section,
+  SectionHeading,
   ParagraphContainer,
-  StyledParagraph,
+  Paragraph,
   SubheadingTitle,
   SubheadingText,
 } from '../common/common-styles';
@@ -39,16 +39,16 @@ const SkillsList = styled.ul``;
 function About() {
   return (
     <SectionContainer>
-      <StyledSection>
-        <SectionHeader>About</SectionHeader>
+      <Section>
+        <SectionHeading>About</SectionHeading>
         <ParagraphContainer>
-          <StyledParagraph>
+          <Paragraph>
             My goal is to become a full-time web developer. My earliest experience with computers
             was in the 90&apos;s as a kid playing DOS games. Eventually, I decided to pursue a
             degree in computer science. My interest in web development began during my final
             semesters where I worked with a couple groups to build full-stack web applications.
-          </StyledParagraph>
-          <StyledParagraph>
+          </Paragraph>
+          <Paragraph>
             My focus is on front-end web development, although I have some experience with{' '}
             <StrongText>Flask</StrongText>, <StrongText>MongoDB</StrongText>,{' '}
             <StrongText>Firebase</StrongText>, and <StrongText> MySQL</StrongText>. There is so
@@ -56,7 +56,7 @@ function About() {
             to build projects. I currently prefer to build my projects using{' '}
             <StrongText>React</StrongText>, <StrongText>Vite</StrongText>, and{' '}
             <StrongText>Styled Components</StrongText>.
-          </StyledParagraph>
+          </Paragraph>
         </ParagraphContainer>
         <Skills>
           <SkillsHeaderGroup>
@@ -65,7 +65,7 @@ function About() {
           </SkillsHeaderGroup>
           <SkillsList />
         </Skills>
-      </StyledSection>
+      </Section>
     </SectionContainer>
   );
 }

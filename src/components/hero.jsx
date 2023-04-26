@@ -50,14 +50,14 @@ const Circle = styled.hgroup`
   }
 `;
 
-const HeaderText = styled.p`
+const HeadingText = styled.p`
   font-size: clamp(1.5rem, 5vmin, 6rem);
   font-weight: 500;
   opacity: 0%;
   animation: 0.5s linear 2s forwards fade-in;
 `;
 
-const HeaderTitle = styled.h1`
+const HeadingTitle = styled.h1`
   font-size: clamp(1.5rem, 5vmin, 6rem);
   font-weight: 500;
   text-align: center;
@@ -69,8 +69,8 @@ const HeaderTitle = styled.h1`
 const CircleSvg = styled.svg`
   position: absolute;
   top: 0;
-  width: var(--circle-size);
-  height: var(--circle-size);
+  width: 100%;
+  height: 100%;
   transform: rotate(-90deg);
   border-radius: 50%;
   animation: 0.25s 2s forwards border-glow;
@@ -107,8 +107,8 @@ function Hero() {
   return (
     <StyledHero>
       <Circle>
-        <HeaderText>I am</HeaderText>
-        <HeaderTitle>Pete Vasiljev</HeaderTitle>
+        <HeadingText>I am</HeadingText>
+        <HeadingTitle>Pete Vasiljev</HeadingTitle>
         <CircleSvg xmlns="http://www.w3.org/2000/svg">
           <CircleBorder />
         </CircleSvg>

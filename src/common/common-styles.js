@@ -7,7 +7,7 @@ const SectionContainer = styled.div`
   background-color: var(--color-app-bg);
 `;
 
-const StyledSection = styled.section`
+const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@ const StyledSection = styled.section`
   gap: 40px;
 `;
 
-const SectionHeader = styled.h2`
+const SectionHeading = styled.h2`
   font-size: 4rem;
   font-weight: 500;
   color: var(--color-gold);
@@ -29,7 +29,7 @@ const ParagraphContainer = styled.div`
   width: 100%;
 `;
 
-const StyledParagraph = styled.p`
+const Paragraph = styled.p`
   font-size: 1.1rem;
   line-height: 1.2;
 `;
@@ -51,10 +51,10 @@ const SubheadingText = styled.p`
 
 export {
   SectionContainer,
-  StyledSection,
-  SectionHeader,
+  Section,
+  SectionHeading,
   ParagraphContainer,
-  StyledParagraph,
+  Paragraph,
   SubheadingTitle,
   SubheadingText,
 };
