@@ -1,38 +1,18 @@
 import styled from 'styled-components';
 
+import Skills from './skills';
 import {
   SectionContainer,
   Section,
   SectionHeading,
   ParagraphContainer,
   Paragraph,
-  SubheadingTitle,
-  SubheadingText,
 } from '../common/common-styles';
 
 const StrongText = styled.strong`
   color: var(--color-green);
   font-weight: 500;
 `;
-
-const Skills = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  padding: 20px;
-  background-color: var(--color-neutral-10);
-  border-radius: 5px;
-`;
-
-const SkillsHeaderGroup = styled.hgroup`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-`;
-
-const SkillsList = styled.ul``;
 
 //-------------------------------------------------------------------------------------------------
 
@@ -58,13 +38,7 @@ function About() {
             <StrongText>Styled Components</StrongText>.
           </Paragraph>
         </ParagraphContainer>
-        <Skills>
-          <SkillsHeaderGroup>
-            <SubheadingTitle>Skills</SubheadingTitle>
-            <SubheadingText>Here are some things I have worked with before</SubheadingText>
-          </SkillsHeaderGroup>
-          <SkillsList />
-        </Skills>
+        <Skills />
       </Section>
     </SectionContainer>
   );
