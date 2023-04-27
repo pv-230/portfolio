@@ -51,6 +51,7 @@ const Circle = styled.hgroup`
 `;
 
 const HeadingText = styled.p`
+  margin: 0;
   font-size: clamp(1.5rem, 5vmin, 6rem);
   font-weight: 500;
   opacity: 0%;
@@ -58,6 +59,7 @@ const HeadingText = styled.p`
 `;
 
 const HeadingTitle = styled.h1`
+  margin: 0;
   font-size: clamp(1.5rem, 5vmin, 6rem);
   font-weight: 500;
   text-align: center;

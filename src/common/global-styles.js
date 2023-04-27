@@ -35,6 +35,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    overflow-x: hidden;
+    background-color: var(--color-app-bg);
+  }
+
   html,
   body,
   #root {

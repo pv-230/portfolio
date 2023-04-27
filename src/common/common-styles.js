@@ -13,10 +13,12 @@ const Section = styled.section`
   align-items: center;
   max-width: var(--content-max-width);
   padding: var(--header-height) 20px;
+  padding-bottom: 0;
   gap: 40px;
 `;
 
 const SectionHeading = styled.h2`
+  margin: 0;
   font-size: 4rem;
   font-weight: 500;
   color: var(--color-gold);
@@ -30,11 +32,13 @@ const ParagraphContainer = styled.div`
 `;
 
 const Paragraph = styled.p`
+  margin: 0;
   font-size: 1.1rem;
   line-height: 1.2;
 `;
 
 const SubheadingTitle = styled.h3`
+  margin: 0;
   font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -42,6 +46,7 @@ const SubheadingTitle = styled.h3`
 `;
 
 const SubheadingText = styled.p`
+  margin: 0;
   color: var(--color-secondary-font);
   font-size: 1.3rem;
   font-weight: 300;

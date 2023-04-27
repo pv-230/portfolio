@@ -27,6 +27,8 @@ const SkillsList = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 `;
 
 const SkillsListItem = styled.li`
@@ -54,14 +56,9 @@ function Skills() {
         {skills.map((skill, i) => {
           const filename = skill.toLowerCase().replaceAll(' ', '-');
           return (
-            <SkillsListItem>
-              <TechIcon
-                src={`src/assets/svg/${filename}.svg`}
-                alt={skill}
-                title={skill}
-                // eslint-disable-next-line react/no-array-index-key
-                key={i}
-              />
+            // eslint-disable-next-line react/no-array-index-key
+            <SkillsListItem key={i}>
+              <TechIcon src={`src/assets/svg/${filename}.svg`} alt={skill} title={skill} />
               <span>{skill}</span>
             </SkillsListItem>
           );

@@ -1,6 +1,6 @@
+import 'normalize.css';
 import styled from 'styled-components';
 
-import '../common/reset.css';
 import GlobalStyle from '../common/global-styles';
 import Header from './header';
 import Hero from './hero';
@@ -11,7 +11,6 @@ import Contact from './contact';
 const StyledApp = styled.div`
   color: var(--color-primary-font);
   background-color: var(--color-app-bg);
-  overflow-x: hidden;
 `;
 
 const StyledMain = styled.main`
