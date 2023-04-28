@@ -1,4 +1,4 @@
-const skills = [
+const tech = [
   'HTML',
   'CSS',
   'JavaScript',
@@ -29,4 +29,4 @@ const skills = [
   'Pytest',
 ];
 
-export default skills;
+export default tech;

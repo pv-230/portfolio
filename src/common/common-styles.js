@@ -54,6 +54,11 @@ const SubheadingText = styled.p`
   text-align: center;
 `;
 
+const TechIcon = styled.img`
+  width: 32px;
+  height: 32px;
+`;
+
 export {
   SectionContainer,
   Section,
@@ -62,4 +67,5 @@ export {
   Paragraph,
   SubheadingTitle,
   SubheadingText,
+  TechIcon,
 };

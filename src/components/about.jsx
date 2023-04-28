@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Skills from './skills';
+import Tech from './tech';
 import {
   SectionContainer,
   Section,
@@ -38,7 +38,7 @@ function About() {
             <StrongText>Styled Components</StrongText>.
           </Paragraph>
         </ParagraphContainer>
-        <Skills />
+        <Tech />
       </Section>
     </SectionContainer>
   );
