@@ -1,15 +1,12 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import { TechIcon } from '../common/common-styles';
+
 const TechList = styled.div`
   display: flex;
   gap: 10px;
   padding: 20px 0;
-`;
-
-const TechIcon = styled.img`
-  width: 32px;
-  height: 32px;
 `;
 
 //-------------------------------------------------------------------------------------------------
@@ -24,7 +21,8 @@ function ProjectTech({ techArr }) {
           src={`src/assets/svg/${tech}.svg`}
           alt={techArr[i]}
           title={techArr[i]}
-          key={tech}
+          // eslint-disable-next-line react/no-array-index-key
+          key={i}
         />
       ))}
     </TechList>
