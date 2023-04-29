@@ -44,7 +44,7 @@ const TechListItem = styled.li`
 
   @media (hover: hover) {
     &:hover {
-      transform: translate(0, -5px);
+      transform: scale(1.075);
     }
   }
 `;
