@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import 'normalize.css';
 import styled from 'styled-components';
 
@@ -21,15 +22,17 @@ const StyledMain = styled.main`
 //-------------------------------------------------------------------------------------------------
 
 function App() {
+  const [currentSection, setCurrentSection] = useState(null);
+
   return (
     <>
       <GlobalStyle />
       <StyledApp>
-        <Header />
+        <Header currentSection={currentSection} />
         <StyledMain>
-          <Hero />
-          <About />
-          <Projects />
+          <Hero setCurrentSection={setCurrentSection} />
+          <About setCurrentSection={setCurrentSection} />
+          <Projects setCurrentSection={setCurrentSection} />
         </StyledMain>
       </StyledApp>
     </>

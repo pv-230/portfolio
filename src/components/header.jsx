@@ -67,7 +67,11 @@ function Header({ currentSection }) {
 }
 
 Header.propTypes = {
-  currentSection: PropTypes.string.isRequired,
+  currentSection: PropTypes.string,
+};
+
+Header.defaultProps = {
+  currentSection: null,
 };
 
 export default Header;

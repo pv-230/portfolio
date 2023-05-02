@@ -1,4 +1,6 @@
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Tech from './tech';
 import {
@@ -8,6 +10,7 @@ import {
   ParagraphContainer,
   Paragraph,
 } from '../common/common-styles';
+import { createIntersectionObserver } from '../common/utils';
 
 const StrongText = styled.strong`
   color: var(--color-green);
@@ -16,10 +19,19 @@ const StrongText = styled.strong`
 
 //-------------------------------------------------------------------------------------------------
 
-function About() {
+function About({ setCurrentSection }) {
+  const sectionId = 'about';
+  const aboutRef = useRef(null);
+
+  // Sets currently highlighted section in the header
+  useEffect(() => {
+    const observer = createIntersectionObserver(setCurrentSection, [sectionId]);
+    observer.observe(aboutRef.current);
+  }, []);
+
   return (
     <SectionContainer>
-      <Section>
+      <Section id={sectionId} ref={aboutRef}>
         <SectionHeading>About</SectionHeading>
         <ParagraphContainer>
           <Paragraph>
@@ -43,5 +55,9 @@ function About() {
     </SectionContainer>
   );
 }
+
+About.propTypes = {
+  setCurrentSection: PropTypes.func.isRequired,
+};
 
 export default About;
