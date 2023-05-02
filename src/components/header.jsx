@@ -52,14 +52,14 @@ function Header({ currentSection }) {
   return (
     <StyledHeader>
       <NavList>
+        <NavLink href="#home" active={currentSection === 'home'}>
+          Home
+        </NavLink>
         <NavLink href="#about" active={currentSection === 'about'}>
           About
         </NavLink>
         <NavLink href="#projects" active={currentSection === 'projects'}>
           Projects
-        </NavLink>
-        <NavLink href="#contact" active={currentSection === 'contact'}>
-          Contact
         </NavLink>
       </NavList>
     </StyledHeader>

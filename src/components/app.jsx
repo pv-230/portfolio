@@ -6,7 +6,6 @@ import Header from './header';
 import Hero from './hero';
 import About from './about';
 import Projects from './projects';
-import Contact from './contact';
 
 const StyledApp = styled.div`
   color: var(--color-primary-font);
@@ -31,7 +30,6 @@ function App() {
           <Hero />
           <About />
           <Projects />
-          <Contact />
         </StyledMain>
       </StyledApp>
     </>
