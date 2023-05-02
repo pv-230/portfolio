@@ -20,13 +20,14 @@ const NavList = styled.nav`
   gap: 10px;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled.button`
   display: block;
   text-align: center;
   padding: 5px;
   font-size: 1.2rem;
   color: ${({ active }) => (active ? 'var(--color-gold)' : 'inherit')};
-  text-decoration: none;
+  background-color: transparent;
+  border: none;
   border-top: 5px solid transparent;
   border-bottom: ${({ active }) =>
     active ? '5px solid var(--color-gold)' : '5px solid transparent'};
@@ -42,6 +43,7 @@ const NavLink = styled.a`
     &:hover {
       color: var(--color-gold);
       border-bottom: 5px solid var(--color-gold);
+      cursor: pointer;
     }
   }
 `;
@@ -49,16 +51,26 @@ const NavLink = styled.a`
 //-------------------------------------------------------------------------------------------------
 
 function Header({ currentSection }) {
+  /**
+   * Event handler for smoothly scrolling to a section based on which button is clicked in the
+   * header nav list.
+   */
+  function handleClick(e) {
+    const destinationId = e.target.textContent.toLowerCase();
+    const element = document.querySelector(`#${destinationId}`);
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <StyledHeader>
       <NavList>
-        <NavLink href="#home" active={currentSection === 'home'}>
+        <NavLink onClick={handleClick} active={currentSection === 'home'}>
           Home
         </NavLink>
-        <NavLink href="#about" active={currentSection === 'about'}>
+        <NavLink onClick={handleClick} active={currentSection === 'about'}>
           About
         </NavLink>
-        <NavLink href="#projects" active={currentSection === 'projects'}>
+        <NavLink onClick={handleClick} active={currentSection === 'projects'}>
           Projects
         </NavLink>
       </NavList>
