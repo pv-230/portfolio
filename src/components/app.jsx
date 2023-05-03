@@ -22,7 +22,7 @@ const StyledMain = styled.main`
 //-------------------------------------------------------------------------------------------------
 
 function App() {
-  const [currentSection, setCurrentSection] = useState(null);
+  const [currentSection, setCurrentSection] = useState('hero');
   const refs = {
     hero: useRef(null),
     about: useRef(null),
