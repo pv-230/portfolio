@@ -16,7 +16,7 @@ const StyledApp = styled.div`
 const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: clamp(10px, 5vmin, 50px);
 `;
 
 //-------------------------------------------------------------------------------------------------
