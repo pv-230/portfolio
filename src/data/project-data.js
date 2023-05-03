@@ -44,7 +44,8 @@ const projects = [
     name: 'Canvas 2',
     summary: 'A learning management platform for students and teachers.',
     details: [
-      'Canvas 2 is a full stack web application that was submitted for a group term project. It is based on the Canvas learning management software frequently used in various schools. The main features include user accounts (student, teacher, teaching assistant, admin), course management, assignment management, plagarism detection, an admin panel, and more. Students are able to submit assignments that get checked for plagiarism. TAs and teachers are able to grade those assignments and provide feedback. Admins can manage all users and modify courses/assignments, as well as approve new teacher accounts that have been registered. The frontend was built with templated HTML, plain CSS, and plain JS. The backend was built with Flask and MongoDB and tested with Pytest.',
+      'Canvas 2 is a full stack web application that was submitted for a group term project. It is based on the Canvas learning management software frequently used in various schools. The main features include user accounts (student, teacher, teaching assistant, admin), course management, assignment management, plagarism detection, an admin panel, and more.',
+      'Students are able to submit assignments that get checked for plagiarism. TAs and teachers are able to grade those assignments and provide feedback. Admins can manage all users and modify courses/assignments, as well as approve new teacher accounts that have been registered. The frontend was built with templated HTML, plain CSS, and plain JS. The backend was built with Flask and MongoDB and tested with Pytest.',
     ],
     tech: ['Flask', 'MongoDB', 'Docker', 'Pytest', 'Jinja'],
     liveLink: null,
