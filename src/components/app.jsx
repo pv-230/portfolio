@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import 'normalize.css';
 import styled from 'styled-components';
 
@@ -23,16 +23,43 @@ const StyledMain = styled.main`
 
 function App() {
   const [currentSection, setCurrentSection] = useState(null);
+  const refs = {
+    hero: useRef(null),
+    about: useRef(null),
+    projects: useRef(null),
+  };
+
+  /**
+   * Sets the current section that is being viewed when any part of the observed elements reach
+   * the center of the viewport.
+   */
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (let i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) {
+            setCurrentSection(entries[i].target.id);
+            break;
+          }
+        }
+      },
+      { rootMargin: '-50% 0% -50% 0%' }
+    );
+
+    observer.observe(refs.hero.current);
+    observer.observe(refs.about.current);
+    observer.observe(refs.projects.current);
+  }, []);
 
   return (
     <>
       <GlobalStyle />
       <StyledApp>
-        <Header currentSection={currentSection} />
+        <Header currentSection={currentSection} refs={refs} />
         <StyledMain>
-          <Hero setCurrentSection={setCurrentSection} />
-          <About setCurrentSection={setCurrentSection} />
-          <Projects setCurrentSection={setCurrentSection} />
+          <Hero ref={refs.hero} />
+          <About ref={refs.about} />
+          <Projects ref={refs.projects} />
         </StyledMain>
       </StyledApp>
     </>

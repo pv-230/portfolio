@@ -1,9 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { forwardRef } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 import circuit from '../assets/svg/circuit.svg';
-import { createIntersectionObserver } from '../common/utils';
 
 const StyledHero = styled.div`
   display: flex;
@@ -108,32 +106,17 @@ const CircleBorder = styled.circle.attrs({
 
 //-------------------------------------------------------------------------------------------------
 
-function Hero({ setCurrentSection }) {
-  const sectionId = 'home';
-  const circleRef = useRef(null);
-
-  // Sets currently highlighted section in the header
-  useEffect(() => {
-    const observer = createIntersectionObserver(setCurrentSection, [sectionId]);
-    observer.observe(circleRef.current);
-  }, []);
-
-  return (
-    <StyledHero id={sectionId}>
-      <Circle ref={circleRef}>
-        <HeadingText>I am</HeadingText>
-        <HeadingTitle>Pete Vasiljev</HeadingTitle>
-        <CircleSvg xmlns="http://www.w3.org/2000/svg">
-          <CircleBorder />
-        </CircleSvg>
-      </Circle>
-      <HeroCircuitBg />
-    </StyledHero>
-  );
-}
-
-Hero.propTypes = {
-  setCurrentSection: PropTypes.func.isRequired,
-};
+const Hero = forwardRef((props, ref) => (
+  <StyledHero ref={ref} id="hero">
+    <Circle>
+      <HeadingText>I am</HeadingText>
+      <HeadingTitle>Pete Vasiljev</HeadingTitle>
+      <CircleSvg xmlns="http://www.w3.org/2000/svg">
+        <CircleBorder />
+      </CircleSvg>
+    </Circle>
+    <HeroCircuitBg />
+  </StyledHero>
+));
 
 export default Hero;

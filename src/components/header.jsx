@@ -1,3 +1,5 @@
+/* eslint-disable react/forbid-prop-types */
+
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -50,21 +52,35 @@ const NavLink = styled.button`
 
 //-------------------------------------------------------------------------------------------------
 
-function Header({ currentSection }) {
+function Header({ currentSection, refs }) {
   /**
    * Event handler for smoothly scrolling to a section based on which button is clicked in the
    * header nav list.
    */
   function handleClick(e) {
-    const destinationId = e.target.textContent.toLowerCase();
-    const element = document.querySelector(`#${destinationId}`);
-    element.scrollIntoView({ behavior: 'smooth' });
+    var destinationElement;
+
+    switch (e.target.textContent) {
+      case 'Home':
+        destinationElement = refs.hero.current;
+        break;
+      case 'About':
+        destinationElement = refs.about.current;
+        break;
+      case 'Projects':
+        destinationElement = refs.projects.current;
+        break;
+      default:
+        throw new Error('Invalid nav button text content');
+    }
+
+    destinationElement.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
     <StyledHeader>
       <NavList>
-        <NavLink onClick={handleClick} active={currentSection === 'home'}>
+        <NavLink onClick={handleClick} active={currentSection === 'hero'}>
           Home
         </NavLink>
         <NavLink onClick={handleClick} active={currentSection === 'about'}>
@@ -80,6 +96,11 @@ function Header({ currentSection }) {
 
 Header.propTypes = {
   currentSection: PropTypes.string,
+  refs: PropTypes.shape({
+    hero: PropTypes.object,
+    about: PropTypes.object,
+    projects: PropTypes.object,
+  }).isRequired,
 };
 
 Header.defaultProps = {
