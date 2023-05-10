@@ -7,6 +7,7 @@ import Header from './header';
 import Hero from './hero';
 import About from './about';
 import Projects from './projects';
+import Footer from './footer';
 
 const StyledApp = styled.div`
   color: var(--color-primary-font);
@@ -61,6 +62,7 @@ function App() {
           <About ref={refs.about} />
           <Projects ref={refs.projects} />
         </StyledMain>
+        <Footer />
       </StyledApp>
     </>
   );
