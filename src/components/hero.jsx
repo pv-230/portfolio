@@ -21,7 +21,6 @@ const HeroCircuitBg = styled.div`
   min-height: 100vh;
   background-image: linear-gradient(to bottom, transparent 90%, var(--color-app-bg)),
     url(${circuit});
-  background-position: center;
   opacity: 0%;
   animation: 1s linear 2s forwards fade-in;
 `;
