@@ -22,6 +22,7 @@ const SectionHeading = styled.h2`
   font-size: 4rem;
   font-weight: 500;
   color: var(--color-gold);
+  text-align: center;
 `;
 
 const ParagraphContainer = styled.div`

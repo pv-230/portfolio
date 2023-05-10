@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledFadeWrapper = styled.div`
+  width: 100%;
   opacity: ${({ isVisible }) => (isVisible ? '100%' : '0%')};
   transform: ${({ isVisible }) => (isVisible ? 'translateX(0)' : 'translateX(-10vw)')};
   transition: opacity 0.5s, transform 0.5s;
