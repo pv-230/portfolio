@@ -12,19 +12,20 @@ const TechList = styled.div`
 //-------------------------------------------------------------------------------------------------
 
 function ProjectTech({ techArr }) {
-  const newTechArr = techArr.map((tech) => tech.toLowerCase().replaceAll(' ', '-'));
-
   return (
     <TechList>
-      {newTechArr.map((tech, i) => (
-        <TechIcon
-          src={`src/assets/svg/${tech}.svg`}
-          alt={techArr[i]}
-          title={techArr[i]}
-          // eslint-disable-next-line react/no-array-index-key
-          key={i}
-        />
-      ))}
+      {techArr.map((tech, i) => {
+        const filename = tech.toLowerCase().replaceAll(' ', '-');
+        return (
+          <TechIcon
+            src={new URL(`/src/assets/svg/${filename}.svg`, import.meta.url).href}
+            alt={techArr[i]}
+            title={techArr[i]}
+            // eslint-disable-next-line react/no-array-index-key
+            key={i}
+          />
+        );
+      })}
     </TechList>
   );
 }

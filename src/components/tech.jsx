@@ -69,7 +69,11 @@ function Tech() {
           return (
             // eslint-disable-next-line react/no-array-index-key
             <TechListItem key={i}>
-              <TechIcon src={`src/assets/svg/${filename}.svg`} alt={techName} title={techName} />
+              <TechIcon
+                src={new URL(`/src/assets/svg/${filename}.svg`, import.meta.url).href}
+                alt={techName}
+                title={techName}
+              />
               <TechName>{techName}</TechName>
             </TechListItem>
           );
