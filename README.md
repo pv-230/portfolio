@@ -14,3 +14,7 @@ This is my web development portofolio that I initially created as the last front
 ## Screenshots
 
 ![Screenshot 1](/screenshots/screenshot1.webp)
+  
+![Screenshot 2](/screenshots/screenshot2.webp)
+  
+![Screenshot 3](/screenshots/screenshot3.webp)
